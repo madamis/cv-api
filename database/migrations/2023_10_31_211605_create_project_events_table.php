@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('project_events', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(\App\Models\Project::class)->constrained();
+            $table->string('event_name');
+            $table->dateTime('start_time')->nullable(_);
+            $table->dateTime('end_time')->nullable(_);
             $table->timestamps();
         });
     }

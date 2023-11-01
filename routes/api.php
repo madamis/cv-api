@@ -1,12 +1,13 @@
 <?php
 
+use App\Http\Controllers\API\V1\CategoryController;
+use App\Http\Controllers\API\V1\ProjectCategoryController;
+use App\Http\Controllers\API\V1\ProjectController;
+use App\Http\Controllers\API\V1\ProjectEventController;
+use App\Http\Controllers\API\V1\UserProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\ProjectCategoryController;
-use App\Http\Controllers\UserProjectController;
-use App\Http\Controllers\ProjectEventController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes

@@ -1,18 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\V1;
 
-use App\Models\ProjectEvent;
+use App\Http\Controllers\Controller;
+use App\Models\Project;
+use App\Models\ProjectCategory;
 use Illuminate\Http\Request;
 
-class ProjectEventController extends Controller
+class ProjectCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $projects = Project::all();
+        return response()->json(['projects'=>$projects], 200);
     }
 
     /**
@@ -34,7 +37,7 @@ class ProjectEventController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ProjectEvent $projectEvent)
+    public function show(ProjectCategory $projectCategory)
     {
         //
     }
@@ -42,7 +45,7 @@ class ProjectEventController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ProjectEvent $projectEvent)
+    public function edit(ProjectCategory $projectCategory)
     {
         //
     }
@@ -50,7 +53,7 @@ class ProjectEventController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ProjectEvent $projectEvent)
+    public function update(Request $request, ProjectCategory $projectCategory)
     {
         //
     }
@@ -58,7 +61,7 @@ class ProjectEventController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ProjectEvent $projectEvent)
+    public function destroy(ProjectCategory $projectCategory)
     {
         //
     }
