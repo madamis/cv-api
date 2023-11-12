@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(\App\Models\Project::class)->constrained();
             $table->string('event_name');
-            $table->dateTime('start_time')->nullable(_);
-            $table->dateTime('end_time')->nullable(_);
+            $table->dateTime('start_time')->nullable();
+            $table->dateTime('end_time')->nullable();
             $table->timestamps();
         });
     }

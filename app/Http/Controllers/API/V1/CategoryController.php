@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers\API\V1;
 
+use App\Http\Controllers\API\APIController;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class CategoryController extends APIController
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return $this->sendResponse($categories,'categories found');
     }
 
     /**

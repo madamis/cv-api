@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\V1\CategoryController;
 use App\Http\Controllers\API\V1\ProjectCategoryController;
 use App\Http\Controllers\API\V1\ProjectController;
